@@ -26,15 +26,15 @@ for (let index = 0; index < 5; index++) {
         if (cur.member.user.bot) return;
         if (cur.channel && (cur.channel.id === chnls[index])) {
             if (cur.channelID === prev.channelID) return;
-            if (selamlı.includes(cur.member.id) && (cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("795416819019415614").rawPosition)) {
+            if (selamlı.includes(cur.member.id) && (cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("795416819019415614").rawPosition)) {//ROLID
                 //console.log(selamlı);
                 ses = await concon.play('./tekrardan.mp3');
                 return;
             }
-            if ((cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("795416819019415614").rawPosition)) {
+            if ((cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("795416819019415614").rawPosition)) { //ROLID
                 ses = await concon.play('./hosgeldin.mp3');
                 selamlı.push(cur.member.user.id);
-            } else if (cur.member.roles.highest.rawPosition > cur.guild.roles.cache.get('795416819019415614').rawPosition) {
+            } else if (cur.member.roles.highest.rawPosition > cur.guild.roles.cache.get('795416819019415614').rawPosition) {//ROLID
                 ses = await concon.play('./yetkili.mp3');
                 selamlı.push(cur.member.user.id);
             }
