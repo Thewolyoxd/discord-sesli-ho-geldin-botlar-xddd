@@ -1,10 +1,8 @@
 const Discord = require('discord.js');
-const { config } = require("dotenv");
-config({ path: __dirname + "./../BASE/.env" });
 const tokens = [
-    process.env.Ses1,
-    process.env.Ses2,
-    process.env.Ses3
+    "TOKEN",
+    "TOKEN",
+    "TOKEN"
 ];
 const chnls = [
     "795403349615837191",
