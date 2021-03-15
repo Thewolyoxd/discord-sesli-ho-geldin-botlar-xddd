@@ -10,7 +10,7 @@ const chnls = [
     "795511848534802473"
 ];
 const selamlı = [];
-for (let index = 0; index < 5; index++) {
+for (let index = 0; index < tokens.length; index++) {
     const token = tokens[index];
     const client = new Discord.Client();
     client.login(token);
