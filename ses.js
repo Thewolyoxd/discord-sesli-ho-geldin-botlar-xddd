@@ -17,6 +17,10 @@ for (let index = 0; index < tokens.length; index++) {
     let concon;
     client.on('ready', async () => {
         console.log(client.user.username);
+        await client.user.setActivity({
+            name: "Tantoony's Welcome Bots",
+            type: "LISTENING"
+        });
         concon = await client.channels.cache.get(chnls[index]).join()
     });
     let ses;
