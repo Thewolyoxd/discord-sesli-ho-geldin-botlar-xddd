@@ -5,9 +5,10 @@ const tokens = [
     "TOKEN"
 ];
 const chnls = [
-    "795403349615837191",
-    "795511833833766912",
-    "795511848534802473"
+    "895605056362131476",
+    "895605342665326643",
+    "895605820144898049",
+    "895605912188899328"
 ];
 const selamlı = [];
 for (let index = 0; index < tokens.length; index++) {
@@ -18,8 +19,8 @@ for (let index = 0; index < tokens.length; index++) {
     client.on('ready', async () => {
         console.log(client.user.username);
         await client.user.setActivity({
-            name: "Tantoony's Welcome Bots",
-            type: "LISTENING"
+            name: "Hey, Hoşgeldin",
+            type: "PLAYING"
         });
         concon = await client.channels.cache.get(chnls[index]).join()
     });
@@ -28,15 +29,15 @@ for (let index = 0; index < tokens.length; index++) {
         if (cur.member.user.bot) return;
         if (cur.channel && (cur.channel.id === chnls[index])) {
             if (cur.channelID === prev.channelID) return;
-            if (selamlı.includes(cur.member.id) && (cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("795416819019415614").rawPosition)) {//ROLID
+            if (selamlı.includes(cur.member.id) && (cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("900784431290281984").rawPosition)) {//ROLID
                 //console.log(selamlı);
                 ses = await concon.play('./tekrardan.mp3');
                 return;
             }
-            if ((cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("795416819019415614").rawPosition)) { //ROLID
+            if ((cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("900784431290281984").rawPosition)) { //ROLID
                 ses = await concon.play('./hosgeldin.mp3');
                 selamlı.push(cur.member.user.id);
-            } else if (cur.member.roles.highest.rawPosition > cur.guild.roles.cache.get('795416819019415614').rawPosition) {//ROLID
+            } else if (cur.member.roles.highest.rawPosition > cur.guild.roles.cache.get('900784431290281984').rawPosition) {//ROLID
                 ses = await concon.play('./yetkili.mp3');
                 selamlı.push(cur.member.user.id);
             }
