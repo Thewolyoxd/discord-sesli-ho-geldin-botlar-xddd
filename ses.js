@@ -1,9 +1,7 @@
 const Discord = require('discord.js');
-const tokens = [
-    "TOKEN",
-    "TOKEN",
-    "TOKEN"
-];
+const tokens = process.env.TOKENS.split(" ");
+
+
 const chnls = [
     "895605056362131476",
     "895605342665326643",
