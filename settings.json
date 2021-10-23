@@ -1,0 +1,17 @@
+{
+
+  "channels": [
+    "897056885474209823",
+    "900780420013101079",
+    "900780452158246932",
+    "900780481149280286"],
+
+  "staffRoles": [
+    "900784431290281984"],
+
+  "unregisterRoles": [
+    "900781660365283409"],
+  
+  "welcomeSound": "https://cdn.discordapp.com/attachments/844644872559657000/846101189066358804/welcome.mp3",
+  "staffSound": "https://cdn.discordapp.com/attachments/844644872559657000/846101189699305502/staff.mp3"
+}
